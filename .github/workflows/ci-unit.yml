@@ -31,6 +31,5 @@ jobs:
         run: npm run test:unit
 
       - name: Display SoftUni username
-        run: | 
-        echo "SoftUni username: M.Ibisheva"
+        run: echo "SoftUni username M.Ibisheva"
 
