@@ -27,6 +27,12 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit
 
+      - name: Init playwright
+        run: npm init playwright@latest
+
+      - name: Init playwright
+        run: npx playwright install
+        
       - name: Run ui tests
         run: npm run test:ui
 
