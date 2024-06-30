@@ -27,15 +27,49 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit
 
+      - name: Display SoftUni username
+        run: echo "SoftUni username M.Ibisheva"
+
+        name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+  ui:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Init playwright
         run: npm init playwright@latest
 
       - name: Init playwright
         run: npx playwright install
 
+      - name: Start the app
+        run: npm start &
+
       - name: Run ui tests
-        run: npm start && npm run test:ui
+        run:  npm run test:ui
 
       - name: Display SoftUni username
         run: echo "SoftUni username M.Ibisheva"
+
+
 
