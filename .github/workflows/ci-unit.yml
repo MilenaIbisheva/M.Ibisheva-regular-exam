@@ -30,8 +30,6 @@ jobs:
       - name: Display SoftUni username
         run: echo "SoftUni username M.Ibisheva"
 
-        name: CI
-
   ui:
     needs: build
     runs-on: ubuntu-latest
