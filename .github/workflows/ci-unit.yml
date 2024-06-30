@@ -27,6 +27,9 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit
 
+      - name: Run ui tests
+        run: npm run test:ui
+
       - name: Display SoftUni username
         run: echo "SoftUni username M.Ibisheva"
 
