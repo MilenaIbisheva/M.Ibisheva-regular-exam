@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.30",
-    "mocha": "^10.2.0"
+    "@types/node": "^20.14.9",
+    "mocha": "^10.5.2"
   }
 }
