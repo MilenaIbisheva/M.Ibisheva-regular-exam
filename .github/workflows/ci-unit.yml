@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run app
-        run: npm start
-
       - name: Run unit tests
         run: npm run test:unit
 
@@ -37,7 +34,7 @@ jobs:
         run: npx playwright install
 
       - name: Run ui tests
-        run: npm run test:ui
+        run: npm start && npm run test:ui
 
       - name: Display SoftUni username
         run: echo "SoftUni username M.Ibisheva"
